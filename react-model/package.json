@@ -1,0 +1,17 @@
+{
+  "name": "react-model",
+  "version": "1.0.0",
+  "description": "my-react-app/ ├── public/ │ ├── index.html │ └── ... ├── src/ │ ├── assets/ │ │ └── images/ │ ├── components/ │ │ ├── Todo/ │ │ │ ├── TodoList.js │ │ │ ├── TodoItem.js │ │ │ └── TodoForm.js │ │ ├── Weather/ │ │ │ ├── WeatherCard.js │ │ │ └── WeatherForm.js │ │ ├── News/ │ │ │ ├── NewsList.js │ │ │ └── NewsItem.js │ │ ├── Movies/ │ │ │ ├── MovieList.js │ │ │ └── MovieDetail.js │ │ ├── Music/ │ │ │ ├── MusicPlayer.js │ │ │ ├── MusicList.js │ │ │ └── MusicDetail.js │ │ ├── Social/ │ │ │ ├── PostList.js │ │ │ ├── PostItem.js │ │ │ └── CommentForm.js │ │ ├── Blog/ │ │ │ ├── BlogList.js │ │ │ ├── BlogDetail.js │ │ │ └── BlogForm.js │ │ └── Ecommerce/ │ │ ├── ProductList.js │ │ ├── ShoppingCart.js │ │ └── CheckoutForm.js │ ├── App.js │ ├── index.js │ └── ... └── package.json",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "qiankun": "^2.10.16",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  }
+}

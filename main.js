@@ -1,0 +1,23 @@
+import { registerMicroApps, start } from "qiankun"
+
+// 配置微前端应用
+const apps = [
+  {
+    name: "reactApp", // 子应用名称
+    entry: "//localhost:7100", // 子应用入口地址
+    container: "#subapp-viewport", // 容器节点的选择器
+    activeRule: "/react", // 激活子应用的路由规则
+  },
+  {
+    name: "vueApp",
+    entry: "//localhost:7200",
+    container: "#subapp-viewport",
+    activeRule: "/vue",
+  },
+]
+
+// 注册子应用
+registerMicroApps(apps)
+
+// 启动主应用
+start()
