@@ -4,12 +4,21 @@
   "description": "微前端",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "webpack serve --config webpack.config.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "qiankun": "^2.10.16"
+    "html-webpack-plugin": "^5.6.0",
+    "qiankun": "^2.10.16",
+    "webpack": "^5.91.0",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^5.0.4"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.24.6",
+    "@babel/preset-env": "^7.24.6",
+    "babel-loader": "^9.1.3"
   }
 }

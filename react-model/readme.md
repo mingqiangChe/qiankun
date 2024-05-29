@@ -81,3 +81,7 @@ my-react-app/
    增加复杂的功能，如用户认证、收藏、搜索等。
    优化:
    对性能进行优化，包括懒加载、代码分割等。
+
+   # 依赖
+
+   npm install react react-dom qiankun webpack webpack-cli webpack-dev-server html-webpack-plugin babel-loader @babel/core @babel/preset-react
