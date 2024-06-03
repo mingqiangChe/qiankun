@@ -3,7 +3,7 @@ import React from "react"
 const App = () => {
   return (
     <div>
-      <h1>React Micro App</h1>
+      <h1>React</h1>
     </div>
   )
 }

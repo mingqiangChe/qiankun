@@ -1,9 +1,17 @@
 import { createApp } from "vue"
 import App from "./App.vue"
+import router from "./router"
+import { createPinia } from "pinia"
 
 let instance = null
 
-const app = createApp(App)
+function render(props = {}) {
+  const { container } = props
+  instance = createApp(App)
+  instance.use(router)
+  instance.use(createPinia())
+  instance.mount(container ? container.querySelector("#app") : "#app")
+}
 
 export async function bootstrap() {
   console.log("[vueApp] vue app bootstraped")
@@ -11,19 +19,24 @@ export async function bootstrap() {
 
 export async function mount(props) {
   console.log("[vueApp] vue app mount", props)
-  instance = app.mount(
-    props.container ? props.container.querySelector("#app") : "#app"
-  )
+  render(props)
 }
 
 export async function unmount(props) {
   console.log("[vueApp] vue app unmount", props)
-  instance.unmount()
-  instance.$el.innerHTML = ""
-  instance = null
+  if (instance) {
+    instance.unmount()
+    if (props.container) {
+      const container = props.container.querySelector("#app")
+      if (container) {
+        container.innerHTML = ""
+      }
+    }
+    instance = null
+  }
 }
 
-// 单独启动子应用时，直接调用 mount 方法进行渲染
+// 如果不在 qiankun 环境下独立运行
 if (!window.__POWERED_BY_QIANKUN__) {
-  mount({})
+  render()
 }

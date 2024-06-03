@@ -1,7 +1,5 @@
 <template>
-  <div>
-    <h1>Vue Micro App</h1>
-  </div>
+  <div class="ccc"><router-view></router-view></div>
 </template>
 
 <script>
@@ -9,3 +7,7 @@ export default {
   name: "App",
 }
 </script>
+
+<style>
+/* 添加你的样式 */
+</style>
